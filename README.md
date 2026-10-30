@@ -27,7 +27,7 @@
 | **SonidoAnimal**     | Interfaz    |                                           | emitirSonido()                                                        | Interfaz de sonido para perro, gato y ave.                      |
 
 ### 1.2 Diagrama de clases
-![DiagramaClases](DiagramaClasesVeterinaria.png)
+![DiagramaClases](docs/DiagramaClasesVeterinaria.png)
 
 ### 1.3 Justificación de relaciones
 * `Dueño – Mascota` (asociación “posee”): Son independientes. Un dueño puede tener varias mascotas, pero la mascota no es parte del dueño. Si se elimina un dueño, sus mascotas deben reasignarse o darse de baja, pero no se borran automáticamente con él.
@@ -38,4 +38,4 @@
 * `Veterinario – Cita` (asociación “atiende”): Una cita se relaciona con un veterinario, pero el veterinario existe sin ella y la cita sin el veterinario no se agenda.
 
 ### 1.4 Diagrama de casos de uso
-![Casos de uso](CasoUsoVeterinaria.png)
+![Casos de uso](docs/CasoUsoVeterinaria.png)

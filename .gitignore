@@ -1,0 +1,32 @@
+### IntelliJ IDEA ###
+.idea/
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+.kotlin
+*.iml
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Storehttps://www.planttext.com?text=jLVTRjis5Butu7VWtPnMANPj544rsqW295cM1Bq_fevTjX9fa9In9Sr33Nk4ljWEAL6YH7l9kkxEFl_du_dJ1sD1sxegsItQ1MYSJimN8NUWeMAy16DoQxLOrnOlkPBtuX7PpzF9TB83_WMso7QeZP9WsDDqmXYiZTN0RQDADZspuJ5sogIgrXhPdDsJKRaDPDXXMOf29GoB9MwKJ1bSQOrZyjlWS3RoawKUijHsDhPw4inkqTvuYmjLxKgqQdQIk7uAkJ-pIhbVUWbMcP7aiyEEjV0iQ_psf-hHAOH6peMIYV56yWUbbHrmrANwsjW_eaLYW1PH0XoBkeHRhJPeo3gKoRkXsI4NG353aMJvMjzto77dmXTKlRrtM-kaKbuo-XpNSWM6AnjgMKZAS0CSsJrvAbGkHKKPFGN3M0ahTCCx7Ese6wuRyozs0pROaFz0sQ5nYHMgNfSO_BVcqgBezREX9ZryKt7pjg1EljzMfshGhaXeraiwBFPA5974BQdEXleZeQXzrDgYHBr4mxNmx_nFnK0jhwCIrF082Q9IxB5SaSsj63FVDWR-2uhPq6bss5q7s8lflQwuckpFgQpxvD4iLON62kwYMojL8iZ_nM--nzNlYXn5vLmgkHMsBdAIIAhrXtg_eCPNciR8eXJI9TjF82LDNLeVm1L9lL-qXBFW0xOQjw03VHOqI27GnhLPkZdJQJHJ93K-Y31m-iWso3yv9rUAGqdJ2Fkf3rkfmgEDzfy62vL0QTF1HajfsQk-CDgu1weDfmqn9XqTHmumb0MbBnnOeW5Af20570cdjQPHsmvJacg7IuHQjTDg3JHVpuvfxwFrCe-NpL4hX-1NW-qawmgrYYThizazsUFNCeQcHFAA5qeFNl91LDYte0M_ZrV-XzCElZo22ImPEvfh5c1H3IlAAZiUIR_AGNFGEVLTGUjsbZmOI8ubw06ZJHq9goY3aF_jtQ_dT_brlioR__d3wcPv6Vujyfl5wgfbZWlGeDuBQll3X-9zo-stQxGFA3TEPmMLXcalhtwq76owSpTf-bLDRKHeRk0NC9ZCfLSR_mYybk2FfcZQa5B3-7x32w5hjoWYg-x8_2oIC-0JlRRvhHPqNu4S7mGXoxOa_bKmWvUYauSkgIZJ06xNRn6mLC1b4iYHKUUxxS5f78dW9tQ16YNTXsOw2TyExx-UdhQBTaICEcN46Ho8qqaul3pFh_iHpMtH4QbVSDD9LvsUCwgoCRklaqInUUWcqylckdpqaTDKUlVkwzdWq9nE_6u_G8zsxm6kCvuRHI2w692GR3ypA8BhRlZib45aD3ZZEzx7wDbWQUSKNY3ez3n3g283nupdRAHTgiyDs_qdUeU3AsTUrdzWp8qhQquruc2D-VqoTKN3QLnBwmLygdwTS_7jBy8xh3Grh0xIGzTIdPBpg8mOQRs9VBKJb-QlGs80X1TBBf0vwmGJtfkeQaYG0XPkjZNHV22WwVlxRm00
