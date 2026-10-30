@@ -36,3 +36,6 @@
 * `Mascota – HistorialClinico` (composición “tiene”): El historial no existe sin la mascota. Si la mascota se elimina, el historial se elimina con ella.
 * `HistorialClinico – Consulta` (composición “registra”): Una consulta solo tiene sentido dentro del historial de una mascota.
 * `Veterinario – Cita` (asociación “atiende”): Una cita se relaciona con un veterinario, pero el veterinario existe sin ella y la cita sin el veterinario no se agenda.
+
+### 1.4 Diagrama de casos de uso
+![Casos de uso](CasoUsoVeterinaria.png)
