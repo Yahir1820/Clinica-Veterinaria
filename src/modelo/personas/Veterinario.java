@@ -1,28 +1,60 @@
 package modelo.personas;
 
+/**
+ * Veterinario de la clínica.
+ * Existe de forma independiente: puede trabajar en otra clínica
+ */
+
 public class Veterinario extends Personas {
-    private String cedulaProfecional;
+    private String cedulaProfesional;
     private String especialidad;
 
-    public Veterinario(String nombre, String apellido, String telefono, String correo, String cedulaProfecional, String especialidad) {
+    /**
+     * Crea un veterinario con su cédula y especialidad
+     *
+     * @param nombre            nombre
+     * @param apellido          apellidos
+     * @param telefono          teléfono de contacto
+     * @param correo            correo electrónico
+     * @param cedulaProfesional cédula profesional
+     * @param especialidad      especialidad clínica
+     */
+
+    public Veterinario(String nombre, String apellido, String telefono, String correo, String cedulaProfesional, String especialidad) {
         super(nombre, apellido, telefono, correo);
-        setCedulaProfecional(cedulaProfecional);
+        setCedulaProfecional(cedulaProfesional);
         setEspecialidad(especialidad);
     }
 
+    /**
+     * @return cédula profesional
+     */
     public String getCedulaProfecional() {
-        return cedulaProfecional;
-    }
-    public void setCedulaProfecional(String cedulaProfecional) {
-        if  (cedulaProfecional == null || cedulaProfecional.trim().isEmpty()) {
-            throw new IllegalArgumentException("La Cedula Profecional es obligatoria");
-        }
-        this.cedulaProfecional = cedulaProfecional;
+        return cedulaProfesional;
     }
 
+    /**
+     * @param cedulaProfesional
+     * @throws IllegalArgumentException si algún dato está vacío
+     */
+    public void setCedulaProfecional(String cedulaProfesional) {
+        if  (cedulaProfesional == null || cedulaProfesional.trim().isEmpty()) {
+            throw new IllegalArgumentException("La Cedula Profecional es obligatoria");
+        }
+        this.cedulaProfesional = cedulaProfesional;
+    }
+
+    /**
+     * @return especialidad
+     */
     public String getEspecialidad() {
         return especialidad;
     }
+
+    /**
+     * @param especialidad
+     * @throws IllegalArgumentException si algún dato está vacío
+     */
     public void setEspecialidad(String especialidad) {
         if (especialidad == null || especialidad.trim().isEmpty()) {
             throw new IllegalArgumentException("La Especialidad es obligatoria");
@@ -33,7 +65,7 @@ public class Veterinario extends Personas {
     @Override
     public String mostrarDatos() {
         return "Veterinario: " + nombreCompleto() + "\nTelefono: " + telefono + "\nCorreo: " + correo
-                + "\nCedula Profecional: " + cedulaProfecional + "\nEspecialidad: " + especialidad;
+                + "\nCedula Profesional: " + cedulaProfesional + "\nEspecialidad: " + especialidad;
     }
 
     @Override
