@@ -7,11 +7,11 @@ import modelo.personas.Dueno;
  */
 
 public abstract class Mascota implements SonidoAnimal {
-    private String nombre;
-    private int edad;
-    private double peso;
-    private Dueno dueno;
-    private HistorialClinico historial;
+    protected String nombre;
+    protected int edad;
+    protected double peso;
+    protected Dueno dueno;
+    protected HistorialClinico historial;
 
     /**
      * Crea una mascota con su dueño
@@ -32,13 +32,6 @@ public abstract class Mascota implements SonidoAnimal {
     }
 
     /**
-     * @return nombre de la mascota
-     */
-    public String getNombre() {
-        return nombre;
-    }
-
-    /**
      * @param nombre
      * @throws IllegalArgumentException si algún dato no es válido
      */
@@ -47,13 +40,6 @@ public abstract class Mascota implements SonidoAnimal {
             throw new IllegalArgumentException("El nombre de la mascota no puede estar vacío");
         }
         this.nombre = nombre;
-    }
-
-    /**
-     * @return edad de la mascota
-     */
-    public int getEdad() {
-        return edad;
     }
 
     /**
@@ -68,12 +54,6 @@ public abstract class Mascota implements SonidoAnimal {
         this.edad = edad;
     }
 
-    /**
-     * @return peso de la mascota en kg
-     */
-    public double getPeso() {
-        return peso;
-    }
 
     /**
      * Actualiza el peso, validando que sea mayor que cero
@@ -84,13 +64,6 @@ public abstract class Mascota implements SonidoAnimal {
         if (peso <= 0) {
             throw new IllegalArgumentException("El peso debe ser mayor a 0");
         }
-    }
-
-    /**
-     * @return dueño de la mascota
-     */
-    public Dueno getDueno() {
-        return dueno;
     }
 
     /**

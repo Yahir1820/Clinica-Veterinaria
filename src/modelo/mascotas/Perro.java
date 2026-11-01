@@ -45,13 +45,6 @@ public class Perro extends Mascota {
     }
 
     /**
-     * @return nivel de energía del perro
-     */
-    public String getNivelEnergia() {
-        return nivelEnergia;
-    }
-
-    /**
      * @param nivelEnergia
      * @throws IllegalArgumentException si algún dato no es válido
      */
@@ -64,7 +57,8 @@ public class Perro extends Mascota {
 
     @Override
     public String mostrarDatosAnimal() {
-        return "Perro: " + getNombre() + " (" + raza + ", energía " + nivelEnergia + ")";
+        return "Dueño: " + dueno.nombreCompleto() + "\nPerro: " + nombre + "\nEdad" + edad
+                + "\nPeso: " + peso + "\nRaza: " + raza + "\nEnergía " + nivelEnergia;
     }
 
     @Override

@@ -39,7 +39,8 @@ public class Gato extends Mascota {
 
     @Override
     public String mostrarDatosAnimal() {
-        return "Gato: " + getNombre() + " (" + (esDomestico ? "doméstico" : "no doméstico") + ")";
+        return "Dueño: " + dueno.nombreCompleto() + "\nPerro: " + nombre + "\nEdad" + edad + "\nPeso: " + peso
+                + (esDomestico ? "\nDoméstico" : "\nNo doméstico");
     }
 
     @Override
