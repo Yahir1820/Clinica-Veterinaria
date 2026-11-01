@@ -2,9 +2,9 @@ package modelo.personas;
 
 /**
  * Dueño de una o más mascotas
- * Además de los datos de Personas, guarda su dirección
+ * Además de los datos de Persona, guarda su dirección
  */
-public class Dueno extends Personas{
+public class Dueno extends Persona {
     private String direccion;
 
     /**

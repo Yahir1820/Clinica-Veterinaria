@@ -116,10 +116,10 @@ public abstract class Mascota implements SonidoAnimal {
      * Muestra la mascota con sus datos específicos
      * @return datos de la mascota
      */
-    public abstract String mostrarDatos();
+    public abstract String mostrarDatosAnimal();
 
     @Override
     public String toString() {
-        return mostrarDatos();
+        return mostrarDatosAnimal();
     }
 }

@@ -5,7 +5,7 @@ package modelo.personas;
  * Tiene los datos comunes de dueños, veterinarios y recepcionistas
  */
 
-public abstract class Personas {
+public abstract class Persona {
     protected String nombre;
     protected String apellido;
     protected String telefono;
@@ -20,14 +20,14 @@ public abstract class Personas {
      * @param correo   correo electrónico
      */
 
-    public Personas(String nombre, String apellido, String telefono, String correo) {
+    public Persona(String nombre, String apellido, String telefono, String correo) {
         setNombre(nombre);
         setApellido(apellido);
         setTelefono(telefono);
         setCorreo(correo);
     }
 
-    public Personas() {
+    public Persona() {
         this.nombre = " ";
         this.apellido = " ";
         this.telefono = " ";

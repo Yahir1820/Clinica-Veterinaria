@@ -4,7 +4,7 @@ package modelo.personas;
  * Recepcionista de la clínica, responsable de registrar dueños, mascotas y citas
  */
 
-public class Recepcionista extends Personas {
+public class Recepcionista extends Persona {
     private String turno;
 
     /**

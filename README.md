@@ -9,7 +9,8 @@
 | **Dueño**            | Concreta    | direccion                                 | mostrarDatos()                                                        | Tiene dirección y posee mascotas                                |
 | **Veterinario**      | Concreta    | cedulaProfesional, especialidad           | mostrarDatos()                                                        | Atiende citas y existe aunque la clínica cierre.                |
 | **Recepcionista**    | Concreta    | turno                                     | mostrarDatos()                                                        | Tiene turno                                                     |
-| **Mascota**          | Abstracta   | nombre, edad, peso                        | setEdad(), setPeso() , mostrarDatos()                                 | Clase padre de perro, gato y ave                                |
+| **SonidoAnimal**     | Interfaz    |                                           | emitirSonido()                                                        | Interfaz la emisión de sonido para perro, gato y ave            |
+| **Mascota**          | Abstracta   | nombre, edad, peso                        | setEdad(), setPeso() , mostrarDatosAnimal()                           | Clase padre de perro, gato y ave                                |
 | **Perro**            | Concreta    | raza, nivelEnergia                        | emitirSonido()                                                        | Tiene raza, nivel de energia y sonido propio                    |
 | **Gato**             | Concreta    | esDomestico                               | emitirSonido()                                                        | Puede ser domestico y tiene sonido propio                       |
 | **AveExotica**       | Concreta    | longitudAlas                              | emitirSonido()                                                        | Tiene longitud de alas y sonido propio                          |
@@ -19,15 +20,15 @@
 | **Clinica**          | Concreta    | nombre, consultorios, veterinarios, citas | agendarCita(), consultarCobros()                                      | Coordina el sistema y agrupa consultorios y personal            |
 | **Cita**             | Concreta    | fechaHora, estado                         | marcarAtendida(), cancelar()                                          | Relaciona mascota, veterinario y consultorio en una fecha       |
 | **EstadoCita**       | Enumeración | PROGRAMADA, ATENDIDA, CANCELADA           |                                                                       | Estados de la cita                                              |
+| **Facturable**       | Interfaz    |                                           | calcularCosto()                                                       | Interfaz para calcular costo de consulta, vacunacion y cirugia  |
 | **Servicio**         | Abstracta   |                                           | calcularCosto()                                                       | Cada servicio calcula su costo distinto                         |
 | **ConsultaGeneral**  | Concreta    | tarifaBase                                | calcularCosto()                                                       | Costo = tarifa base                                             |
 | **Vacunacion**       | Concreta    | costoVacuna                               | calcularCosto()                                                       | Costo = costo de la vacuna                                      |
 | **Cirugia**          | Concreta    | complejidad, horasQuirofano, tarifaHora   | calcularCosto()                                                       | Costo depende de complejidad y horas de quirófano               |
 | **Comprobante**      | Concreta    | total, fecha                              | getTotal()                                                            | Documento que se genera al terminar una cita                    |
-| **SonidoAnimal**     | Interfaz    |                                           | emitirSonido()                                                        | Interfaz de sonido para perro, gato y ave.                      |
 
 ### 1.2 Diagrama de clases
-![DiagramaClases](docs/DiagramaClasesVeterinaria.png)
+![DiagramaClases](docs/DiagramaClasesVeterinaria1.png)
 
 ### 1.3 Justificación de relaciones
 * `Dueño – Mascota` (asociación “posee”): Son independientes. Un dueño puede tener varias mascotas, pero la mascota no es parte del dueño. Si se elimina un dueño, sus mascotas deben reasignarse o darse de baja, pero no se borran automáticamente con él.

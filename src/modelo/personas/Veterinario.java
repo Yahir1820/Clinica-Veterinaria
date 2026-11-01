@@ -5,7 +5,7 @@ package modelo.personas;
  * Existe de forma independiente: puede trabajar en otra clínica
  */
 
-public class Veterinario extends Personas {
+public class Veterinario extends Persona {
     private String cedulaProfesional;
     private String especialidad;
 

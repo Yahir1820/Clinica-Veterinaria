@@ -42,7 +42,7 @@ public class AveExotica extends Mascota {
     }
 
     @Override
-    public String mostrarDatos() {
+    public String mostrarDatosAnimal() {
         return "Ave exótica: " + getNombre() + " (alas de " + longitudAlas + " cm)";
     }
 
