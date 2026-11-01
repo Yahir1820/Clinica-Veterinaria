@@ -22,13 +22,6 @@ public class Dueno extends Persona {
     }
 
     /**
-     * @return dirección del dueño
-     */
-    public String getDireccion() {
-        return direccion;
-    }
-
-    /**
      * @param direccion
      * @throws IllegalArgumentException si algún dato está vacío
      */

@@ -41,13 +41,6 @@ public abstract class Persona {
      */
 
     /**
-     * @return nombre de la persona
-     */
-    public String getNombre() {
-        return nombre;
-    }
-
-    /**
      * @param nombre
      * @throws IllegalArgumentException si algún dato está vacío
      */
@@ -56,13 +49,6 @@ public abstract class Persona {
             throw new IllegalArgumentException("El nombre es obligatorio");
         }
         this.nombre = nombre;
-    }
-
-    /**
-     * @return apellido de la persona
-     */
-    public String getApellido() {
-        return apellido;
     }
 
     /**
@@ -77,13 +63,6 @@ public abstract class Persona {
     }
 
     /**
-     * @return teléfono de la persona
-     */
-    public String getTelefono() {
-        return telefono;
-    }
-
-    /**
      * @param telefono
      * @throws IllegalArgumentException si algún dato está vacío
      */
@@ -92,13 +71,6 @@ public abstract class Persona {
             throw new IllegalArgumentException("El telefono es obligatorio");
         }
         this.telefono = telefono;
-    }
-
-    /**
-     * @return correo de la persona
-     */
-    public String getCorreo() {
-        return correo;
     }
 
     /**

@@ -23,13 +23,6 @@ public class Recepcionista extends Persona {
     }
 
     /**
-     * @return turno
-     */
-    public String getTurno() {
-        return turno;
-    }
-
-    /**
      * @param turno
      * @throws IllegalArgumentException si algún dato está vacío
      */

@@ -27,13 +27,6 @@ public class Veterinario extends Persona {
     }
 
     /**
-     * @return cédula profesional
-     */
-    public String getCedulaProfecional() {
-        return cedulaProfesional;
-    }
-
-    /**
      * @param cedulaProfesional
      * @throws IllegalArgumentException si algún dato está vacío
      */
@@ -42,13 +35,6 @@ public class Veterinario extends Persona {
             throw new IllegalArgumentException("La Cedula Profecional es obligatoria");
         }
         this.cedulaProfesional = cedulaProfesional;
-    }
-
-    /**
-     * @return especialidad
-     */
-    public String getEspecialidad() {
-        return especialidad;
     }
 
     /**
