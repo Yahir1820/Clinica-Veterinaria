@@ -111,7 +111,7 @@ public class Cita {
 
     @Override
     public String toString() {
-        return "Fecha: " + fechaHora + "\nMascota: " + mascota.getNombreMascota() + "\nVeterinario asignado: " + veterinario.nombreCompleto()
+        return "Fecha: " + fechaHora + "\nMascota: " + mascota.nombreMascota() + "\nVeterinario asignado: " + veterinario.nombreCompleto()
                 + "\n" + consultorio + "\nEstado: " + estado;
     }
 

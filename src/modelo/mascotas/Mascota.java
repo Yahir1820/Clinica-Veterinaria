@@ -43,6 +43,13 @@ public abstract class Mascota implements SonidoAnimal {
     }
 
     /**
+     * @return nombre de la mascota
+     */
+    public String getNombreMascota() {
+        return nombre;
+    }
+
+    /**
      * Actualiza la edad, validando que sea mayor que cero
      * @param edad
      * @throws IllegalArgumentException si la edad es menor o igual a cero
@@ -54,6 +61,12 @@ public abstract class Mascota implements SonidoAnimal {
         this.edad = edad;
     }
 
+    /**
+     * @return edad en años
+     */
+    public int getEdad() {
+        return edad;
+    }
 
     /**
      * Actualiza el peso, validando que sea mayor que cero
@@ -68,6 +81,13 @@ public abstract class Mascota implements SonidoAnimal {
     }
 
     /**
+     * @return peso en kilogramos
+     */
+    public double getPeso() {
+        return peso;
+    }
+
+    /**
      * Actualiza el dueño de la mascota
      * @param dueno
      * @throws IllegalArgumentException si no se registra un nuevo dueño
@@ -77,6 +97,13 @@ public abstract class Mascota implements SonidoAnimal {
             throw new IllegalArgumentException("La mascota debe tener un dueño");
         }
         this.dueno = dueno;
+    }
+
+    /**
+     * @return dueño de la mascota
+      */
+    public Dueno getDueno() {
+        return dueno;
     }
 
     /**
