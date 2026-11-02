@@ -57,7 +57,7 @@ public class Perro extends Mascota {
 
     @Override
     public String mostrarDatosAnimal() {
-        return "Dueño: " + dueno.nombreCompleto() + "\nPerro: " + nombre + "\nEdad" + edad
+        return "Dueño: " + dueno.nombreCompleto() + "\nPerro: " + nombre + "\nEdad: " + edad
                 + "\nPeso: " + peso + "\nRaza: " + raza + "\nEnergía " + nivelEnergia;
     }
 

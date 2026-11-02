@@ -29,7 +29,7 @@ public class Consulta {
      * @throws IllegalArgumentException si la consulta está vacía
      */
     public void setFecha(String fecha) {
-        if (fecha == null) {
+        if (fecha == null || fecha.isBlank()) {
             throw new IllegalArgumentException("La fecha de la consulta no puede estar vacía");
         }
         this.fecha = fecha;

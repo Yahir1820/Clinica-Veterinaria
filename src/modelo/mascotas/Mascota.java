@@ -56,7 +56,7 @@ public abstract class Mascota implements SonidoAnimal {
      */
     public void setEdad(int edad) {
         if (edad <= 0) {
-            throw new IllegalArgumentException("El edad debe ser mayor a 0");
+            throw new IllegalArgumentException("La edad debe ser mayor a 0");
         }
         this.edad = edad;
     }

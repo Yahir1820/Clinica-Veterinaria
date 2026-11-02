@@ -35,7 +35,7 @@ public class Vacunacion extends Servicio{
      */
     public void setCostoVacuna(double costoVacuna) {
         if (costoVacuna <= 0) {
-            throw new IllegalArgumentException("El costro de la vacuna no puede ser menor a 0");
+            throw new IllegalArgumentException("El costo de la vacuna no puede ser menor a 0");
         }
         this.costoVacuna = costoVacuna;
     }

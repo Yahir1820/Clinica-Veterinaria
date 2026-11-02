@@ -22,7 +22,7 @@ public class Veterinario extends Persona {
 
     public Veterinario(String nombre, String apellido, String telefono, String correo, String cedulaProfesional, String especialidad) {
         super(nombre, apellido, telefono, correo);
-        setCedulaProfecional(cedulaProfesional);
+        setCedulaProfesional(cedulaProfesional);
         setEspecialidad(especialidad);
     }
 
@@ -30,7 +30,7 @@ public class Veterinario extends Persona {
      * @param cedulaProfesional
      * @throws IllegalArgumentException si algún dato está vacío
      */
-    public void setCedulaProfecional(String cedulaProfesional) {
+    public void setCedulaProfesional(String cedulaProfesional) {
         if  (cedulaProfesional == null || cedulaProfesional.trim().isEmpty()) {
             throw new IllegalArgumentException("La Cedula Profecional es obligatoria");
         }

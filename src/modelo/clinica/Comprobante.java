@@ -85,7 +85,7 @@ public class Comprobante {
 
     @Override
     public String toString() {
-        return "Comprobante #" + numero + "\nFecha" + fecha + "\nMascota: " + cita.getMascota().getNombreMascota()
+        return "Comprobante #" + numero + "\nFecha: " + fecha + "\nMascota: " + cita.getMascota().getNombreMascota()
                 + "\nTotal: $" + String.format("%.2f", total);
     }
 }
