@@ -6,9 +6,11 @@ package modelo.servicios;
 public class Cirugia extends Servicio {
     /**
      * Costo de uso del quirófano
-     * Costo de uso del quirófano por hora
      */
     public static final double TARIFA_SALA = 300.00;
+    /**
+    * Costo de uso del quirófano por hora
+     */
     public static final double TARIFA_HORA = 50.00;
 
     private int complejidad;
