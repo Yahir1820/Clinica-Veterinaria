@@ -16,7 +16,7 @@
 | **AveExotica**       | Concreta    | longitudAlas                                          | emitirSonido()                                                        | Tiene longitud de alas y sonido propio                          |
 | **HistorialClinico** | Concreta    | consultas                                             | agregarConsulta(), verConsultas()                                     | Solo tiene sentido dentro de una mascota                        |
 | **Consulta**         | Concreta    | fecha, diagnostico, tratamiento                       | getDiagnostico()                                                      | Registro clínico dentro del historial                           |
-| **Consultorio**      | Concreta    | numero                                                | getNumero()                                                           | Pertenece a la clínica y desaparece con ella                    |
+| **Consultorio**      | Concreta    | numeroConsultorio                                     | getNumeroConsultorio()                                                | Pertenece a la clínica y desaparece con ella                    |
 | **Clinica**          | Concreta    | nombre, consultorios, veterinarios, citas             | agendarCita(), consultarCobros()                                      | Coordina el sistema y agrupa consultorios y personal            |
 | **Cita**             | Concreta    | fechaHora, estado                                     | marcarAtendida(), cancelar()                                          | Relaciona mascota, veterinario y consultorio en una fecha       |
 | **EstadoCita**       | Enumeración | PROGRAMADA, ATENDIDA, CANCELADA                       |                                                                       | Estados de la cita                                              |
@@ -28,7 +28,7 @@
 | **Comprobante**      | Concreta    | total, fecha                                          | getTotal()                                                            | Documento que se genera al terminar una cita                    |
 
 ### 1.2 Diagrama de clases
-![DiagramaClases](docs/DiagramaClasesVeterinaria.png)
+![DiagramaClases](docs/DiagramaClasesVeterinaria1.png)
 
 ### 1.3 Justificación de relaciones
 * `Dueño – Mascota` (asociación “posee”): Son independientes. Un dueño puede tener varias mascotas, pero la mascota no es parte del dueño. Si se elimina un dueño, sus mascotas deben reasignarse o darse de baja, pero no se borran automáticamente con él.
