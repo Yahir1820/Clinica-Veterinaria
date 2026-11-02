@@ -7,7 +7,7 @@ import java.time.LocalDate;
  */
 
 public class Consulta {
-    protected LocalDate fecha;
+    protected String fecha;
     protected String diagnostico;
     protected String tratamiento;
 
@@ -18,17 +18,17 @@ public class Consulta {
      * @param diagnostico diagnóstico del veterinario
      * @param tratamiento tratamiento indicado
      */
-    public Consulta(LocalDate fecha, String diagnostico, String tratamiento) {
+    public Consulta(String fecha, String diagnostico, String tratamiento) {
         setFecha(fecha);
         setDiagnostico(diagnostico);
         setTratamiento(tratamiento);
     }
 
     /**
-     * @param fecha
+     * @param fecha fecha de la atención
      * @throws IllegalArgumentException si la consulta está vacía
      */
-    public void setFecha(LocalDate fecha) {
+    public void setFecha(String fecha) {
         if (fecha == null) {
             throw new IllegalArgumentException("La fecha de la consulta no puede estar vacía");
         }
@@ -36,7 +36,7 @@ public class Consulta {
     }
 
     /**
-     * @param diagnostico
+     * @param diagnostico diagnóstico del veterinario
      * @throws IllegalArgumentException si el diagnostico está vacío
      */
     public void setDiagnostico(String diagnostico){
@@ -47,7 +47,7 @@ public class Consulta {
     }
 
     /**
-     * @param tratamiento
+     * @param tratamiento tratamiento indicado
      * @throws IllegalArgumentException si el tratamiento está vacío
      */
     public void setTratamiento(String tratamiento){

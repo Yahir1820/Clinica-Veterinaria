@@ -1,5 +1,4 @@
 package modelo.clinica;
-import java.time.LocalDateTime;
 import modelo.mascotas.Mascota;
 import modelo.personas.Veterinario;
 import modelo.servicios.Servicio;
@@ -11,7 +10,7 @@ public class Cita {
     protected Mascota mascota;
     protected Veterinario veterinario;
     protected Consultorio consultorio;
-    protected LocalDateTime fechaHora;
+    protected String fechaHora;
     protected EstadoCita estado;
     protected Servicio servicio;
 
@@ -24,7 +23,7 @@ public class Cita {
      * @param fechaHora fecha y hora de la cita
      * @throws IllegalArgumentException si algún dato es nulo
      */
-    public Cita(Mascota mascota, Veterinario veterinario, Consultorio consultorio, LocalDateTime fechaHora) {
+    public Cita(Mascota mascota, Veterinario veterinario, Consultorio consultorio, String fechaHora) {
         if (mascota == null || veterinario == null || consultorio == null || fechaHora == null) {
             throw new IllegalArgumentException("La cita requiere mascota, veterinario, consultorio y fecha");
         }
@@ -91,27 +90,27 @@ public class Cita {
     /**
      * @return fecha y hora de la cita
      */
-    public LocalDateTime getFechaHora() {
+    public String getFechaHora() {
         return fechaHora;
     }
 
     /**
      * @return estado actual de la cita
-     * */
+     */
     public EstadoCita getEstado() {
         return estado;
     }
 
     /**
-     * @return servicio prestado, o null si la cita no ha sido atendida
-     * */
+     @return servicio prestado, o null si la cita no ha sido atendida
+     */
     public Servicio getServicio() {
         return servicio;
     }
 
     @Override
     public String toString() {
-        return "Fecha: " + fechaHora + "\nMascota: " + mascota.nombreMascota() + "\nVeterinario asignado: " + veterinario.nombreCompleto()
+        return "Fecha: " + fechaHora + "\nMascota: " + mascota.getNombreMascota() + "\nVeterinario asignado: " + veterinario.nombreCompleto()
                 + "\n" + consultorio + "\nEstado: " + estado;
     }
 

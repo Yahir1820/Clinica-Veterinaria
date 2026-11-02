@@ -1,5 +1,4 @@
 package modelo.clinica;
-import java.time.LocalDate;
 
 /**
  * Comprobante de cobro generado al terminar una cita atendida.
@@ -12,19 +11,19 @@ public class Comprobante {
     protected int numero;
     protected Cita cita;
     protected double total;
-    protected LocalDate fecha;
+    protected String fecha;
 
     /**
      * Crea un comprobante a partir de una cita atendida
      *
-     * @param cita  cita atendida que se cobra
+     * @param cita cita atendida que se cobra
      * @param total total a cobrar
      */
     public Comprobante(Cita cita, double total) {
         setCita(cita);
         setTotal(total);
         this.numero = ++contadorGenerados;
-        this.fecha = cita.getFechaHora().toLocalDate();
+        this.fecha = cita.getFechaHora();
     }
 
     /**
@@ -42,7 +41,7 @@ public class Comprobante {
     }
 
     /**
-     * @param cita
+     * @param cita cita atendida que se cobra
      * @throws IllegalArgumentException si la cita es nula
      */
     public void setCita(Cita cita) {
@@ -60,7 +59,7 @@ public class Comprobante {
     }
 
     /**
-     * @param total
+     * @param total total a cobrar
      * @throws IllegalArgumentException si el total es menor a 0
      */
     public void setTotal(double total) {
@@ -80,7 +79,7 @@ public class Comprobante {
     /**
      * @return fecha del cobro
      */
-    public LocalDate getFecha() {
+    public String getFecha() {
         return fecha;
     }
 

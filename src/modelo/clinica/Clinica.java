@@ -1,5 +1,4 @@
 package modelo.clinica;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -85,7 +84,8 @@ public class Clinica {
     }
 
     /**
-     * Agenda una cita. Revisa que el veterinario y el consultorio estén libres (reglas 2 y 4).
+     * Agenda una cita
+     * Revisa que el veterinario y el consultorio estén libres
      *
      * @param mascota mascota que asiste
      * @param veterinario veterinario que atiende
@@ -94,7 +94,7 @@ public class Clinica {
      * @return la cita creada
      * @throws IllegalArgumentException si hay un conflicto de horario o un dato no está registrado
      */
-    public Cita agendarCita(Mascota mascota, Veterinario veterinario, Consultorio consultorio, LocalDateTime fechaHora) {
+    public Cita agendarCita(Mascota mascota, Veterinario veterinario, Consultorio consultorio, String fechaHora) {
         if (!mascotas.contains(mascota)) {
             throw new IllegalArgumentException("La mascota no está registrada");
         }
@@ -110,18 +110,23 @@ public class Clinica {
             }
             if (existente.getFechaHora().equals(fechaHora)) {
                 if (existente.getVeterinario() == veterinario) {
-                    throw new IllegalArgumentException(
-                            "El veterinario ya tiene una cita programada a esa hora");
+                    throw new IllegalArgumentException("El veterinario ya tiene una cita programada a esa hora");
                 }
                 if (existente.getConsultorio() == consultorio) {
-                    throw new IllegalArgumentException(
-                            "El consultorio ya está ocupado a esa hora");
+                    throw new IllegalArgumentException("El consultorio ya está ocupado a esa hora");
                 }
             }
         }
         Cita cita = new Cita(mascota, veterinario, consultorio, fechaHora);
         citas.add(cita);
         return cita;
+    }
+
+    // Ninguna otra clase necesita ejecutarla, así que es privado
+    private void validarCitaDeClinica(Cita cita) {
+        if (cita == null || !citas.contains(cita)) {
+            throw new IllegalArgumentException("La cita no pertenece a la clínica");
+        }
     }
 
     /**
@@ -136,7 +141,7 @@ public class Clinica {
     public void atenderCita(Cita cita, Servicio servicio, String diagnostico, String tratamiento) {
         validarCitaDeClinica(cita);
         cita.marcarAtendida(servicio);
-        Consulta consulta = new Consulta(cita.getFechaHora().toLocalDate(), diagnostico, tratamiento);
+        Consulta consulta = new Consulta(cita.getFechaHora(), diagnostico, tratamiento);
         cita.getMascota().getHistorial().agregarConsulta(consulta);
     }
 
@@ -231,10 +236,10 @@ public class Clinica {
      * @param fecha día a buscar
      * @return citas de ese día
      */
-    public List<Cita> buscarCitas(java.time.LocalDate fecha) {
+    public List<Cita> buscarCitas(String fecha) {
         List<Cita> resultado = new ArrayList<>();
         for (Cita c : citas) {
-            if (c.getFechaHora().toLocalDate().equals(fecha)) {
+            if (c.getFechaHora().startsWith(fecha)) {
                 resultado.add(c);
             }
         }
@@ -324,13 +329,4 @@ public class Clinica {
         return Collections.unmodifiableList(citas);
     }
 
-    /*
-     * Acceso privado: es una validación interna que solo usan los métodos de esta clase
-     * Ninguna otra clase necesita ejecutarla, así que no se expone
-     */
-    private void validarCitaDeClinica(Cita cita) {
-        if (cita == null || !citas.contains(cita)) {
-            throw new IllegalArgumentException("La cita no pertenece a la clínica");
-        }
-    }
 }
