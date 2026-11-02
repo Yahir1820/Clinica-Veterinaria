@@ -95,19 +95,23 @@ public class Cita {
         return fechaHora;
     }
 
-    /** @return estado actual de la cita */
+    /**
+     * @return estado actual de la cita
+     * */
     public EstadoCita getEstado() {
         return estado;
     }
 
-    /** @return servicio prestado, o null si la cita no ha sido atendida */
+    /**
+     * @return servicio prestado, o null si la cita no ha sido atendida
+     * */
     public Servicio getServicio() {
         return servicio;
     }
 
     @Override
     public String toString() {
-        return "Fecha: " + fechaHora + "\nMascota: " + mascota.getNombre() + "\nVeterinario asignado: " + veterinario.nombreCompleto()
+        return "Fecha: " + fechaHora + "\nMascota: " + mascota.getNombreMascota() + "\nVeterinario asignado: " + veterinario.nombreCompleto()
                 + "\n" + consultorio + "\nEstado: " + estado;
     }
 

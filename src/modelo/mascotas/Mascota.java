@@ -64,6 +64,7 @@ public abstract class Mascota implements SonidoAnimal {
         if (peso <= 0) {
             throw new IllegalArgumentException("El peso debe ser mayor a 0");
         }
+        this.peso = peso;
     }
 
     /**
