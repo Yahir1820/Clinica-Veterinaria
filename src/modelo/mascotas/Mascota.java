@@ -50,6 +50,14 @@ public abstract class Mascota implements SonidoAnimal {
     }
 
     /**
+     * @return nombre de la mascota
+     */
+    public String getNombreMascota() {
+        return nombre;
+    }
+
+
+    /**
      * @return edad de la mascota
      */
     public int getEdad() {
