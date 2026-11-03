@@ -48,6 +48,13 @@ public class Veterinario extends Persona {
         this.especialidad = especialidad;
     }
 
+    /**
+     * @return especialidad
+     */
+    public String getEspecialidad() {
+        return especialidad;
+    }
+
     @Override
     public String mostrarDatos() {
         return "Veterinario: " + nombreCompleto() + "\nTelefono: " + telefono + "\nCorreo: " + correo
@@ -58,5 +65,6 @@ public class Veterinario extends Persona {
     public String toString() {
         return mostrarDatos();
     }
+
 
 }

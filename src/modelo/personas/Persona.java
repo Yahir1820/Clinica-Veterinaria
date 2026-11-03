@@ -74,6 +74,13 @@ public abstract class Persona {
     }
 
     /**
+     * @return telefono del due{o}
+     */
+    public String getTelefono() {
+        return telefono;
+    }
+
+    /**
      * @param correo
      * @throws IllegalArgumentException si algún dato está vacío
      */
