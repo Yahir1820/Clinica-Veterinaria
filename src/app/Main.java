@@ -229,7 +229,6 @@ public class Main {
             } else if (opcionDomestico == 2) {
                 domestico = false;
             }
-            scanner.nextLine();
             mascota = new Gato(nombreMascota, edadMascota, pesoMascota, dueno, domestico);
         } else if (tipoMascota == 3) {
             System.out.print("Longitud de alas (cm): ");
